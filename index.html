@@ -1,108 +1,79 @@
-export default function SunFarmHouseWebsite() {
-  const heroImage = "/images/hero-farmhouse.jpg";
-  const mapsLink = "https://www.google.com/maps/search/Sun+Farm+House";
-
-  return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {/* Clean Navbar */}
-      <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-xl tracking-wide font-semibold">Sun Farm House</h1>
-          <nav className="hidden md:flex gap-8 text-sm text-gray-600">
-            <a href="#about">About</a>
-            <a href="#booking">Booking</a>
-            <a href="#location">Location</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <section
-        className="h-screen bg-cover bg-center relative flex items-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-10 max-w-5xl px-8 md:px-20 text-white">
-          <h2 className="text-6xl md:text-8xl font-bold leading-tight text-center w-full">
-            Sun Farm House
-          </h2>
-          <p className="mt-6 text-lg md:text-xl max-w-2xl text-gray-100 mx-auto text-center">
-            A peaceful private farmhouse in Vizag for family stays, weekend retreats and intimate gatherings.
-          </p>
-        </div>
-      </section>
-
-      {/* About */}
-      <section id="about" className="max-w-6xl mx-auto px-6 md:px-20 py-24">
-        <h3 className="text-3xl font-semibold mb-6">About Sun Farm House</h3>
-        <p className="text-gray-600 text-lg leading-8 max-w-4xl">
-          Designed for calm getaways and comfortable stays, Sun Farm House offers spacious rooms,
-          a serene outdoor setting and a private atmosphere ideal for families and small groups.
-        </p>
-      </section>
-
-      {/* Photos */}
-      <section className="max-w-6xl mx-auto px-6 md:px-20 py-24">
-        <h3 className="text-3xl font-semibold mb-10 text-center">Gallery</h3>
-        <div className="grid md:grid-cols-4 gap-6">
-          {[1,2,3,4].map((item) => (
-            <div key={item} className="h-56 rounded-xl bg-gray-200 flex items-center justify-center text-gray-500">
-              Photo {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Booking */}
-      <section id="booking" className="bg-gray-50 py-24">
-        <div className="max-w-4xl mx-auto px-6">
-          <h3 className="text-3xl font-semibold mb-10 text-center">Reserve Your Stay</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <input className="border rounded-lg px-4 py-4" placeholder="Full Name" />
-            <input className="border rounded-lg px-4 py-4" placeholder="Phone Number" />
-            <div>
-              <label className="block text-sm text-gray-500 mb-2">Check-in</label>
-              <input type="date" className="w-full border rounded-lg px-4 py-4" />
-            </div>
-            <div>
-              <label className="block text-sm text-gray-500 mb-2">Check-out</label>
-              <input type="date" className="w-full border rounded-lg px-4 py-4" />
-            </div>
-            <button className="md:col-span-2 bg-black text-white py-4 rounded-lg font-medium hover:opacity-90 transition">
-              Request Booking
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="max-w-6xl mx-auto px-6 md:px-20 py-24">
-        <h3 className="text-3xl font-semibold mb-10 text-center">Details & Services</h3>
-        <div className="grid md:grid-cols-4 gap-6 text-center">
-          {['AC Rooms', 'Family Stay', 'Parking', '24/7 Support'].map((item) => (
-            <div key={item} className="border rounded-xl p-6">{item}</div>
-          ))}
-        </div>
-      </section>
-
-      {/* Location */}
-      <section id="location" className="py-20 text-center">
-        <h3 className="text-3xl font-semibold mb-4">Location</h3>
-        <a href={mapsLink} target="_blank" rel="noreferrer" className="text-gray-700 underline">
-          Q9QF+4CQ Guest house, Rushikonda, Andhra Pradesh 530045
-        </a>
-      </section>
-
-      {/* Contact Details */}
-      <section className="bg-gray-900 text-white py-16 text-center">
-        <h3 className="text-3xl font-semibold mb-4">Contact Details</h3>
-        <p className="text-lg">Phone: 90085 09798</p>
-        <p className="text-gray-300 mt-2">Available for bookings and stay enquiries</p>
-      </section>
-
-      <footer className="border-t py-6 text-center text-sm text-gray-500">
-        © 2026 Sun Farm House
-      </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sun Farm House</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+  <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl tracking-wide font-semibold">Sun Farm House</h1>
+      <nav class="hidden md:flex gap-8 text-sm text-gray-600">
+        <a href="#about">About</a>
+        <a href="#booking">Booking</a>
+        <a href="#location">Location</a>
+      </nav>
     </div>
-  );
-}
+  </header>
+
+  <section class="h-screen bg-cover bg-center relative flex items-center" style="background-image:url('hero-farmhouse.jpg')">
+    <div class="absolute inset-0 bg-black/35"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-8 text-white">
+      <h2 class="text-6xl md:text-8xl font-bold text-center">Sun Farm House</h2>
+      <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-center">A peaceful private farmhouse in Vizag for family stays, weekend retreats and intimate gatherings.</p>
+    </div>
+  </section>
+
+  <section id="about" class="max-w-6xl mx-auto px-6 py-24">
+    <h3 class="text-3xl font-semibold mb-6">About Sun Farm House</h3>
+    <p class="text-gray-600 text-lg leading-8 max-w-4xl">Designed for calm getaways and comfortable stays, Sun Farm House offers spacious rooms, a serene outdoor setting and a private atmosphere ideal for families and small groups.</p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <h3 class="text-3xl font-semibold mb-10 text-center">Gallery</h3>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="h-56 rounded-xl bg-gray-200 flex items-center justify-center">Photo 1</div>
+      <div class="h-56 rounded-xl bg-gray-200 flex items-center justify-center">Photo 2</div>
+      <div class="h-56 rounded-xl bg-gray-200 flex items-center justify-center">Photo 3</div>
+      <div class="h-56 rounded-xl bg-gray-200 flex items-center justify-center">Photo 4</div>
+    </div>
+  </section>
+
+  <section id="booking" class="bg-gray-50 py-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-semibold mb-10 text-center">Reserve Your Stay</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <input class="border rounded-lg px-4 py-4" placeholder="Full Name" />
+        <input class="border rounded-lg px-4 py-4" placeholder="Phone Number" />
+        <input type="date" class="border rounded-lg px-4 py-4" />
+        <input type="date" class="border rounded-lg px-4 py-4" />
+        <button class="md:col-span-2 bg-black text-white py-4 rounded-lg">Request Booking</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <h3 class="text-3xl font-semibold mb-10 text-center">Details & Services</h3>
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div class="border rounded-xl p-6">AC Rooms</div>
+      <div class="border rounded-xl p-6">Family Stay</div>
+      <div class="border rounded-xl p-6">Parking</div>
+      <div class="border rounded-xl p-6">24/7 Support</div>
+    </div>
+  </section>
+
+  <section id="location" class="py-20 text-center">
+    <h3 class="text-3xl font-semibold mb-4">Location</h3>
+    <p>Q9QF+4CQ Guest house, Rushikonda, Andhra Pradesh 530045</p>
+  </section>
+
+  <section class="bg-gray-900 text-white py-16 text-center">
+    <h3 class="text-3xl font-semibold mb-4">Contact Details</h3>
+    <p class="text-lg">Phone: 90085 09798</p>
+  </section>
+
+  <footer class="border-t py-6 text-center text-sm text-gray-500">© 2026 Sun Farm House</footer>
+</body>
+</html>
